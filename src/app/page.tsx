@@ -518,7 +518,7 @@ export default function SetebanForm() {
               <textarea
                 value={data.q26}
                 onChange={(e) => setData((d) => ({ ...d, q26: e.target.value }))}
-                placeholder="Comentários adicionais, sugestões de melhorias..."
+                placeholder="Comentários adicionais"
                 rows={4}
                 className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-700 resize-none focus:outline-none focus:border-[#E1343A] transition-colors"
               />
