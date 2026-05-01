@@ -496,7 +496,7 @@ export default function SetebanForm() {
               <div>
                 <QLabel
                   n={23}
-                  text="Você se sente preparado(a) para atuar em missões urbanas na Região Metropolitana de Goiás?"
+                  text="Você se sente preparado(a) para atuar em missões urbanas na Região Metropolitana de Goiânia?"
                 />
                 <div className="flex flex-col gap-2">
                   {[
