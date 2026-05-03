@@ -1,8 +1,15 @@
 import { NextResponse } from "next/server";
+import { supabaseAdmin } from "@/lib/supabase";
 
 export async function POST(request: Request) {
   const data = await request.json();
-  // TODO: persist to Supabase or another store
-  console.log("[seteban-forms] submission:", JSON.stringify(data, null, 2));
+
+  const { error } = await supabaseAdmin.from("form_responses").insert(data);
+
+  if (error) {
+    console.error("[seteban-forms] supabase error:", error.message);
+    return NextResponse.json({ ok: false, error: error.message }, { status: 500 });
+  }
+
   return NextResponse.json({ ok: true });
 }
